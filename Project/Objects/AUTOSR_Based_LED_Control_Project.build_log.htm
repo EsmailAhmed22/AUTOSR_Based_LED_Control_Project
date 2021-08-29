@@ -26,9 +26,8 @@ Project File Date:  08/29/2021
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
-Build target 'Target 1'
+Rebuild target 'Target 1'
 assembling startup_TM4C123.s...
-compiling dd.c...
 RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
 C:/Users/Esmail/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
 C:/Users/Esmail/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
@@ -165,9 +164,14 @@ C:/Users/Esmail/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C1
   ^
 44 warnings generated.
 compiling system_TM4C123.c...
+dd.c(2): warning: unused variable 'd' [-Wunused-variable]
+        int volatile d=0;
+                     ^
+1 warning generated.
+compiling dd.c...
 linking...
-Program Size: Code=676 RO-data=636 RW-data=0 ZI-data=608  
-".\Objects\AUTOSR_Based_LED_Control_Project.axf" - 0 Error(s), 44 Warning(s).
+Program Size: Code=684 RO-data=636 RW-data=0 ZI-data=608  
+".\Objects\AUTOSR_Based_LED_Control_Project.axf" - 0 Error(s), 45 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -196,7 +200,7 @@ Package Vendor: Keil
       Include file:  Device\Include\TM4C123\TM4C123.h
       Source file:   Device\Source\ARM\startup_TM4C123.s
       Source file:   Device\Source\system_TM4C123.c
-Build Time Elapsed:  00:00:04
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
