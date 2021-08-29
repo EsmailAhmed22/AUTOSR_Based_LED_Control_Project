@@ -27,6 +27,617 @@ Project File Date:  08/29/2021
 <h2>Output:</h2>
 *** Using Compiler 'V6.16', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target 1'
+dd.c(1): warning: ISO C requires a translation unit to contain at least one declaration [-Wempty-translation-unit]
+^
+1 warning generated.
+compiling dd.c...
+../../Final Project/Gpt.c(12): warning: In file included from...
+../../Final Project/Gpt.h(15): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/Gpt.c(12): warning: In file included from...
+../../Final Project/Gpt.h(15): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+../../Final Project/Gpt.c(13): warning: In file included from...
+../../Final Project/Gpt_Regs.h(76): warning: no newline at end of file [-Wnewline-eof]
+#endif /* GPT_REGS_H */
+                       ^
+../../Final Project/Gpt.c(23): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+void SysTick_Handler(void)
+     ^
+../../Final Project/Gpt.c(23): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Handler(void)
+^
+static 
+../../Final Project/Gpt.c(88): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+5 warnings generated.
+compiling Gpt.c...
+../../Final Project/Det.c(14): warning: In file included from...
+../../Final Project/Det.h(40): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/Det.c(14): warning: In file included from...
+../../Final Project/Det.h(40): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+../../Final Project/Det.c(14): warning: In file included from...
+../../Final Project/Det.h(90): warning: no newline at end of file [-Wnewline-eof]
+#endif /*DET_H */
+                 ^
+../../Final Project/Det.c(33): warning: unused parameter 'ConfigPtr' [-Wunused-parameter]
+void Det_Init( const Det_ConfigType* ConfigPtr ){
+                                     ^
+4 warnings generated.
+compiling Det.c...
+../../Final Project/Dio_PBcfg.c(12): warning: In file included from...
+../../Final Project/Dio.h(41): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/Dio_PBcfg.c(12): warning: In file included from...
+../../Final Project/Dio.h(41): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+../../Final Project/Dio_PBcfg.c(43): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+const Dio_ConfigType Dio_Configuration={DioConf_LED1_PORT_NUM,DioConf_LED1_CHANNEL_NUM,
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                        {                                             }
+../../Final Project/Dio_Cfg.h(65): note: expanded from macro 'DioConf_LED1_PORT_NUM'
+#define DioConf_LED1_PORT_NUM                (Dio_PortType)5 /* PORTF */
+                                             ^
+../../Final Project/Dio_PBcfg.c(44): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+                                        DioConf_SW1_PORT_NUM,DioConf_SW1_CHANNEL_NUM,
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                        {                                           }
+../../Final Project/Dio_Cfg.h(66): note: expanded from macro 'DioConf_SW1_PORT_NUM'
+#define DioConf_SW1_PORT_NUM                 (Dio_PortType)5 /* PORTF */
+                                             ^
+../../Final Project/Dio_PBcfg.c(43): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+const Dio_ConfigType Dio_Configuration={DioConf_LED1_PORT_NUM,DioConf_LED1_CHANNEL_NUM,
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                        {
+../../Final Project/Dio_Cfg.h(65): note: expanded from macro 'DioConf_LED1_PORT_NUM'
+#define DioConf_LED1_PORT_NUM                (Dio_PortType)5 /* PORTF */
+                                             ^
+../../Final Project/Dio_PBcfg.c(45): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+                                        DIO_CONFIGURED_PORTF};
+                                        ^~~~~~~~~~~~~~~~~~~~
+                                        {                   }
+../../Final Project/Dio_Cfg.h(62): note: expanded from macro 'DIO_CONFIGURED_PORTF'
+#define DIO_CONFIGURED_PORTF                 (Dio_PortType)5 /* PORTF */
+                                             ^~~~~~~~~~~~~~~
+6 warnings generated.
+compiling Dio_PBcfg.c...
+../../Final Project/App.c(12): warning: In file included from...
+../../Final Project/App.h(15): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/App.c(12): warning: In file included from...
+../../Final Project/App.h(15): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+../../Final Project/App.c(16): warning: In file included from...
+../../Final Project/Port.h(50): warning: In file included from...
+../../Final Project/Port_Cfg.h(269): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_CFG_H */
+                       ^
+../../Final Project/App.c(16): warning: In file included from...
+../../Final Project/Port.h(189): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_H */
+                   ^
+4 warnings generated.
+compiling App.c...
+../../Final Project/Button.c(11): warning: In file included from...
+../../Final Project/Dio.h(41): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/Button.c(11): warning: In file included from...
+../../Final Project/Dio.h(41): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+../../Final Project/Button.c(12): warning: In file included from...
+../../Final Project/Port.h(50): warning: In file included from...
+../../Final Project/Port_Cfg.h(269): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_CFG_H */
+                       ^
+../../Final Project/Button.c(12): warning: In file included from...
+../../Final Project/Port.h(189): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_H */
+                   ^
+4 warnings generated.
+compiling Button.c...
+../../Final Project/Dio.c(12): warning: In file included from...
+../../Final Project/Dio.h(41): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/Dio.c(12): warning: In file included from...
+../../Final Project/Dio.h(41): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+../../Final Project/Dio.c(17): warning: In file included from...
+../../Final Project/Det.h(90): warning: no newline at end of file [-Wnewline-eof]
+#endif /*DET_H */
+                 ^
+../../Final Project/Dio.c(214): warning: implicit conversion loses integer precision: 'unsigned long' to 'Dio_LevelType' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return BIT_IS_SET(*Port_Ptr,Dio_PortChannels[ChannelId].Ch_Num);
+        ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Common_Macros.h(32): note: expanded from macro 'BIT_IS_SET'
+#define BIT_IS_SET(REG,BIT) ( REG & (1<<BIT) )
+                              ~~~~^~~~~~~~~~
+../../Final Project/Dio.c(357): warning: implicit conversion loses integer precision: 'volatile uint32' (aka 'volatile unsigned long') to 'Dio_PortLevelType' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return *Port_Ptr;
+        ~~~~~~ ^~~~~~~~~
+../../Final Project/Dio.c(12): warning: In file included from...
+../../Final Project/Dio.h(41): warning: In file included from...
+../../Final Project/Std_Types.h(61): warning: padding size of 'Std_VersionInfoType' with 1 byte to alignment boundary [-Wpadded]
+typedef struct{
+        ^
+../../Final Project/Dio.c(504): warning: implicit conversion loses integer precision: 'int' to 'uint8' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        ROR(Channel_Group_value,ChannelGroupIdPtr->offset);
+        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Common_Macros.h(26): note: expanded from macro 'ROR'
+#define ROR(REG,num) ( REG = (REG>>num) | (REG << ((sizeof(REG) * 8)-num)) )
+                           ~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Dio.c(594): warning: implicit conversion loses integer precision: 'int' to 'Dio_PortLevelType' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                ROL(Level,ChannelGroupIdPtr->offset);
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Common_Macros.h(29): note: expanded from macro 'ROL'
+#define ROL(REG,num) ( REG = (REG<<num) | (REG >> ((sizeof(REG) * 8)-num)) )
+                           ~ ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Dio.c(676): warning: implicit conversion loses integer precision: 'unsigned long' to 'Dio_LevelType' (aka 'unsigned char') [-Wimplicit-int-conversion]
+        return BIT_IS_SET(*Port_Ptr,Dio_PortChannels[ChannelId].Ch_Num);
+        ~~~~~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Common_Macros.h(32): note: expanded from macro 'BIT_IS_SET'
+#define BIT_IS_SET(REG,BIT) ( REG & (1<<BIT) )
+                              ~~~~^~~~~~~~~~
+9 warnings generated.
+compiling Dio.c...
+../../Final Project/Led.c(11): warning: In file included from...
+../../Final Project/Port.h(40): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/Led.c(11): warning: In file included from...
+../../Final Project/Port.h(40): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+../../Final Project/Led.c(11): warning: In file included from...
+../../Final Project/Port.h(50): warning: In file included from...
+../../Final Project/Port_Cfg.h(269): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_CFG_H */
+                       ^
+../../Final Project/Led.c(11): warning: In file included from...
+../../Final Project/Port.h(189): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_H */
+                   ^
+../../Final Project/Led.c(58): warning: unused variable 'state' [-Wunused-variable]
+    Dio_LevelType state = Dio_FlipChannel(DioConf_LED1_CHANNEL_ID_INDEX);
+                  ^
+5 warnings generated.
+compiling Led.c...
+../../Final Project/main.c(11): warning: In file included from...
+../../Final Project/Os.h(15): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/main.c(11): warning: In file included from...
+../../Final Project/Os.h(15): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+2 warnings generated.
+compiling main.c...
+../../Final Project/Os.c(12): warning: In file included from...
+../../Final Project/Os.h(15): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/Os.c(12): warning: In file included from...
+../../Final Project/Os.h(15): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+../../Final Project/Os.c(77): warning: function 'Os_Scheduler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+3 warnings generated.
+compiling Os.c...
+../../Final Project/Port_PBcfg.c(12): warning: In file included from...
+../../Final Project/Port.h(40): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/Port_PBcfg.c(12): warning: In file included from...
+../../Final Project/Port.h(40): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+../../Final Project/Port_PBcfg.c(12): warning: In file included from...
+../../Final Project/Port.h(50): warning: In file included from...
+../../Final Project/Port_Cfg.h(269): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_CFG_H */
+                       ^
+../../Final Project/Port_PBcfg.c(12): warning: In file included from...
+../../Final Project/Port.h(189): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_H */
+                   ^
+../../Final Project/Port_PBcfg.c(59): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_0,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(49): note: expanded from macro 'PIN_0'
+#define PIN_0                             (0U)
+                                          ^
+../../Final Project/Port_PBcfg.c(69): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_1,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(50): note: expanded from macro 'PIN_1'
+#define PIN_1                             (1U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(79): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_2,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(51): note: expanded from macro 'PIN_2'
+#define PIN_2                             (2U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(89): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_3,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(52): note: expanded from macro 'PIN_3'
+#define PIN_3                             (3U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(99): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_4,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(53): note: expanded from macro 'PIN_4'
+#define PIN_4                             (4U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(109): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_5,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(54): note: expanded from macro 'PIN_5'
+#define PIN_5                             (5U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(119): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_6,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(55): note: expanded from macro 'PIN_6'
+#define PIN_6                             (6U)
+                                          ^
+../../Final Project/Port_PBcfg.c(129): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_7,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(56): note: expanded from macro 'PIN_7'
+#define PIN_7                             (7U)
+                                          ^
+../../Final Project/Port_PBcfg.c(139): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_0,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(49): note: expanded from macro 'PIN_0'
+#define PIN_0                             (0U)
+                                          ^
+../../Final Project/Port_PBcfg.c(149): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_1,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(50): note: expanded from macro 'PIN_1'
+#define PIN_1                             (1U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(159): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_2,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(51): note: expanded from macro 'PIN_2'
+#define PIN_2                             (2U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(169): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_3,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(52): note: expanded from macro 'PIN_3'
+#define PIN_3                             (3U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(179): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_4,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(53): note: expanded from macro 'PIN_4'
+#define PIN_4                             (4U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(189): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_5,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(54): note: expanded from macro 'PIN_5'
+#define PIN_5                             (5U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(199): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_6,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(55): note: expanded from macro 'PIN_6'
+#define PIN_6                             (6U)
+                                          ^
+../../Final Project/Port_PBcfg.c(209): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_7,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(56): note: expanded from macro 'PIN_7'
+#define PIN_7                             (7U)
+                                          ^
+../../Final Project/Port_PBcfg.c(219): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_0,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(49): note: expanded from macro 'PIN_0'
+#define PIN_0                             (0U)
+                                          ^
+../../Final Project/Port_PBcfg.c(229): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_1,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(50): note: expanded from macro 'PIN_1'
+#define PIN_1                             (1U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(239): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_2,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(51): note: expanded from macro 'PIN_2'
+#define PIN_2                             (2U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(249): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_3,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(52): note: expanded from macro 'PIN_3'
+#define PIN_3                             (3U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(259): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_4,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(53): note: expanded from macro 'PIN_4'
+#define PIN_4                             (4U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(269): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_5,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(54): note: expanded from macro 'PIN_5'
+#define PIN_5                             (5U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(279): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_6,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(55): note: expanded from macro 'PIN_6'
+#define PIN_6                             (6U)
+                                          ^
+../../Final Project/Port_PBcfg.c(289): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_7,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(56): note: expanded from macro 'PIN_7'
+#define PIN_7                             (7U)
+                                          ^
+../../Final Project/Port_PBcfg.c(299): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_0,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(49): note: expanded from macro 'PIN_0'
+#define PIN_0                             (0U)
+                                          ^
+../../Final Project/Port_PBcfg.c(309): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_1,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(50): note: expanded from macro 'PIN_1'
+#define PIN_1                             (1U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(319): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_2,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(51): note: expanded from macro 'PIN_2'
+#define PIN_2                             (2U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(329): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_3,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(52): note: expanded from macro 'PIN_3'
+#define PIN_3                             (3U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(339): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_4,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(53): note: expanded from macro 'PIN_4'
+#define PIN_4                             (4U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(349): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_5,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(54): note: expanded from macro 'PIN_5'
+#define PIN_5                             (5U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(359): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_6,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(55): note: expanded from macro 'PIN_6'
+#define PIN_6                             (6U)
+                                          ^
+../../Final Project/Port_PBcfg.c(369): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_7,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(56): note: expanded from macro 'PIN_7'
+#define PIN_7                             (7U)
+                                          ^
+../../Final Project/Port_PBcfg.c(379): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_0,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(49): note: expanded from macro 'PIN_0'
+#define PIN_0                             (0U)
+                                          ^
+../../Final Project/Port_PBcfg.c(389): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_1,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(50): note: expanded from macro 'PIN_1'
+#define PIN_1                             (1U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(399): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_2,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(51): note: expanded from macro 'PIN_2'
+#define PIN_2                             (2U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(409): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_3,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(52): note: expanded from macro 'PIN_3'
+#define PIN_3                             (3U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(419): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_4,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(53): note: expanded from macro 'PIN_4'
+#define PIN_4                             (4U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(429): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_5,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(54): note: expanded from macro 'PIN_5'
+#define PIN_5                             (5U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(439): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_0,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(49): note: expanded from macro 'PIN_0'
+#define PIN_0                             (0U)
+                                          ^
+../../Final Project/Port_PBcfg.c(449): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_1,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(50): note: expanded from macro 'PIN_1'
+#define PIN_1                             (1U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(459): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_2,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(51): note: expanded from macro 'PIN_2'
+#define PIN_2                             (2U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(469): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_3,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(52): note: expanded from macro 'PIN_3'
+#define PIN_3                             (3U)  
+                                          ^
+../../Final Project/Port_PBcfg.c(479): warning: suggest braces around initialization of subobject [-Wmissing-braces]
+  PIN_4,
+  ^~~~~~
+  {
+../../Final Project/Port_Cfg.h(53): note: expanded from macro 'PIN_4'
+#define PIN_4                             (4U)  
+                                          ^
+47 warnings generated.
+compiling Port_PBcfg.c...
+../../Final Project/Port.c(12): warning: In file included from...
+../../Final Project/Port.h(40): warning: In file included from...
+../../Final Project/Std_Types.h(48): warning: In file included from...
+../../Final Project/Compiler.h(104): warning: no newline at end of file [-Wnewline-eof]
+#endif  /*COMPILER_H*/
+                      ^
+../../Final Project/Port.c(12): warning: In file included from...
+../../Final Project/Port.h(40): warning: In file included from...
+../../Final Project/Std_Types.h(97): warning: no newline at end of file [-Wnewline-eof]
+#endif /* STD_TYPES_H */
+                        ^
+../../Final Project/Port.c(12): warning: In file included from...
+../../Final Project/Port.h(50): warning: In file included from...
+../../Final Project/Port_Cfg.h(269): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_CFG_H */
+                       ^
+../../Final Project/Port.c(12): warning: In file included from...
+../../Final Project/Port.h(189): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_H */
+                   ^
+../../Final Project/Port.c(17): warning: In file included from...
+../../Final Project/Det.h(90): warning: no newline at end of file [-Wnewline-eof]
+#endif /*DET_H */
+                 ^
+../../Final Project/Port.c(170): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+    *(Port_Ptr+PORT_CTL_REG_OFFSET)&= ~( MASK << ((Port_Pins+Pin)->Pin_Num)*SHIFT_LEFT_OFFSET);
+                                   ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Port.c(173): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+    *(Port_Ptr+PORT_CTL_REG_OFFSET)|= ( (Port_Pins+Pin)->Pin_Mode << ((Port_Pins+Pin)->Pin_Num)*SHIFT_LEFT_OFFSET);
+                                   ~~   ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Port.c(300): warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+  for(int i = 0 ; i < PORT_CONFIGURED_PORT_PINS ; i++){
+                  ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Port.c(12): warning: In file included from...
+../../Final Project/Port.h(40): warning: In file included from...
+../../Final Project/Std_Types.h(61): warning: padding size of 'Std_VersionInfoType' with 1 byte to alignment boundary [-Wpadded]
+typedef struct{
+        ^
+../../Final Project/Port.c(498): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+    *(Port_Ptr+PORT_CTL_REG_OFFSET)&= ~( MASK << ((Port_Pins+Pin)->Pin_Num)*SHIFT_LEFT_OFFSET);
+                                   ~~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Port.c(501): warning: implicit conversion changes signedness: 'int' to 'unsigned long' [-Wsign-conversion]
+    *(Port_Ptr+PORT_CTL_REG_OFFSET)|= ( Mode << ((Port_Pins+Pin)->Pin_Num)*SHIFT_LEFT_OFFSET);
+                                   ~~   ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../../Final Project/Port.c(504): warning: no newline at end of file [-Wnewline-eof]
+#endif /* PORT_SET_PIN_MODE_API */
+                                  ^
+12 warnings generated.
+compiling Port.c...
 assembling startup_TM4C123.s...
 RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
 C:/Users/Esmail/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
@@ -164,14 +775,9 @@ C:/Users/Esmail/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C1
   ^
 44 warnings generated.
 compiling system_TM4C123.c...
-dd.c(2): warning: unused variable 'd' [-Wunused-variable]
-        int volatile d=0;
-                     ^
-1 warning generated.
-compiling dd.c...
 linking...
-Program Size: Code=684 RO-data=636 RW-data=0 ZI-data=608  
-".\Objects\AUTOSR_Based_LED_Control_Project.axf" - 0 Error(s), 45 Warning(s).
+Program Size: Code=2476 RO-data=1004 RW-data=4 ZI-data=648  
+".\Objects\AUTOSR_Based_LED_Control_Project.axf" - 0 Error(s), 146 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -200,7 +806,7 @@ Package Vendor: Keil
       Include file:  Device\Include\TM4C123\TM4C123.h
       Source file:   Device\Source\ARM\startup_TM4C123.s
       Source file:   Device\Source\system_TM4C123.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:04
 </pre>
 </body>
 </html>

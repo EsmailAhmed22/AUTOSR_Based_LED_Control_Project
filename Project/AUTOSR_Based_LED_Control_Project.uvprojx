@@ -388,6 +388,151 @@
               <FileType>1</FileType>
               <FilePath>.\dd.c</FilePath>
             </File>
+            <File>
+              <FileName>App.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\App.c</FilePath>
+            </File>
+            <File>
+              <FileName>App.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\App.h</FilePath>
+            </File>
+            <File>
+              <FileName>Button.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\Button.c</FilePath>
+            </File>
+            <File>
+              <FileName>Button.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Button.h</FilePath>
+            </File>
+            <File>
+              <FileName>Common_Macros.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Common_Macros.h</FilePath>
+            </File>
+            <File>
+              <FileName>Compiler.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Compiler.h</FilePath>
+            </File>
+            <File>
+              <FileName>Compiler_Cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Compiler_Cfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>Det.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\Det.c</FilePath>
+            </File>
+            <File>
+              <FileName>Det.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Det.h</FilePath>
+            </File>
+            <File>
+              <FileName>Dio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\Dio.c</FilePath>
+            </File>
+            <File>
+              <FileName>Dio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Dio.h</FilePath>
+            </File>
+            <File>
+              <FileName>Dio_Cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Dio_Cfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>Dio_PBcfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\Dio_PBcfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>Dio_Regs.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Dio_Regs.h</FilePath>
+            </File>
+            <File>
+              <FileName>Gpt.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\Gpt.c</FilePath>
+            </File>
+            <File>
+              <FileName>Gpt.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Gpt.h</FilePath>
+            </File>
+            <File>
+              <FileName>Gpt_Regs.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Gpt_Regs.h</FilePath>
+            </File>
+            <File>
+              <FileName>Led.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\Led.c</FilePath>
+            </File>
+            <File>
+              <FileName>Led.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Led.h</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>Os.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\Os.c</FilePath>
+            </File>
+            <File>
+              <FileName>Os.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Os.h</FilePath>
+            </File>
+            <File>
+              <FileName>Platform_Types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Platform_Types.h</FilePath>
+            </File>
+            <File>
+              <FileName>Port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\Port.c</FilePath>
+            </File>
+            <File>
+              <FileName>Port.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Port.h</FilePath>
+            </File>
+            <File>
+              <FileName>Port_Cfg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Port_Cfg.h</FilePath>
+            </File>
+            <File>
+              <FileName>Port_PBcfg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\Final Project\Port_PBcfg.c</FilePath>
+            </File>
+            <File>
+              <FileName>Port_Regs.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Port_Regs.h</FilePath>
+            </File>
+            <File>
+              <FileName>Std_Types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\..\Final Project\Std_Types.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
