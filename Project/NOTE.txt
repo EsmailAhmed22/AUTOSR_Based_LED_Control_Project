@@ -1,2 +1,0 @@
-The Project is made on keil.
-You can take the code files and use it with your IDE but don't forget to add startup code.
