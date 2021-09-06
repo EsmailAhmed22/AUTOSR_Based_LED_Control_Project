@@ -13,6 +13,11 @@
 * **System Services Layer :** I created a Simple RTOS with General Purpose timer GPT to handle the   application tasks.
 * **Application Layer :** Application which is to toggle a led every time a button is presssed.
 
+#### SOFTWARE AND HARDWARE USED
+* The Project is based on TM4C123GH6PM MCU.
+* The Project is made on keil.
+* You can take the code files and use it with your IDE but don't forget to add startup code.
+
 ## Full Layered Architecture
 ---
 ![Layered Architecture](https://user-images.githubusercontent.com/89493135/130728492-7608ce06-a8fc-4363-ac4e-2edfde71cbbb.png)
@@ -128,4 +133,3 @@
 ---
 * We can replace this application with any other application that depends on DIO or PORT module we'll just need to addapt the configurations in PBcfg files to our needs.
 * We can add more autosar modules with time to expand our application possibilities.
-
