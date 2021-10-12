@@ -80,19 +80,19 @@ void Port_Init( const Port_ConfigType* ConfigPtr ){
   }
   
   /**********Enable clock for PORTx and allow time for clock to start**********/  
-  SET_BIT(PORT_ClOCK_REGISTER,(Port_Pins+Pin)->Pin_Num);
+  SET_BIT(PORT_ClOCK_REGISTER,(Port_Pins+Pin)->Port_Num);
   delay = PORT_ClOCK_REGISTER;
   
   /*********Check if it is locked Pin then Unlock it***************************/
-  if(Pin == PORT_C_PIN_0  |Pin == PORT_C_PIN_1 |Pin == PORT_C_PIN_2 
-    |Pin == PORT_C_PIN_3  |Pin == PORT_D_PIN_7 |Pin == PORT_F_PIN_0 )
+  if(Pin == PORT_D_PIN_7 |Pin == PORT_F_PIN_0 )
   {
     *(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_LOCK_REG_OFFSET)= UNLOCK_VALUE;
     *(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_COMMIT_REG_OFFSET)|=(1<<(Port_Pins+Pin)->Pin_Num);
   }
-  else
+  else if(Pin == PORT_C_PIN_0  |Pin == PORT_C_PIN_1 |Pin == PORT_C_PIN_2 |Pin == PORT_C_PIN_3)
   {
-    /*No Required Action */
+		/* Skip this loop */
+    continue;
   }
   /***************************Setting Pin Direction****************************/
   /* In case Input pin */
@@ -151,7 +151,7 @@ void Port_Init( const Port_ConfigType* ConfigPtr ){
     /* Disable the GPIO pin to be Digital pin  */
     CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
     
-    /* Set Analog bit to enable the analog isolation circuit */ 
+    /* Set Analog bit to disable the analog isolation circuit */ 
     SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
   } 
   /* For any other Mode */
