@@ -8,7 +8,6 @@
  *
  * Author: Esmail Ahmed
  ******************************************************************************/
-#include "Port.h"
 #include "Dio.h"
 #include "Led.h"
 

@@ -109,32 +109,43 @@ void Port_Init( const Port_ConfigType* ConfigPtr ){
   }
 
   /***************** Setting Pin Pull-Up or Pull-Down or OFF ******************/
-  /* In case PULL UP*/
-  if((Port_Pins+Pin)->Pull_Up_Down_Choice == PORT_PIN_PULL_UP)
+  /* In case input pin Set Pin Pull-Up or Pull-Down or OFF */
+  if((Port_Pins+Pin)->Pin_Direction == PORT_PIN_IN )
   {
-    /* Set the pin in the PULL-UP register to make it PULL-UP pin */
-    SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_PULL_UP_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    /* In case PULL UP*/
+    if((Port_Pins+Pin)->Pull_Up_Down_Choice == PORT_PIN_PULL_UP)
+    {
+      /* Set the pin in the PULL-UP register to make it PULL-UP pin */
+      SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_PULL_UP_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    }
+    /* In case PULL DOWN*/
+    else if((Port_Pins+Pin)->Pull_Up_Down_Choice == PORT_PIN_PULL_DOWN)
+    {
+      /* Set the pin in the PULL-DOWN register to make it PULL-DOWN pin */
+      SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_PULL_DOWN_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    }
+    /* In case NO PULL*/
+    else
+    {
+      /* Clear the pin in both Pull-up and Pull-down register */
+      CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_PULL_UP_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+      CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_PULL_DOWN_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    }
   }
-  /* In case PULL DOWN*/
-  else if((Port_Pins+Pin)->Pull_Up_Down_Choice == PORT_PIN_PULL_DOWN)
-  {
-    /* Set the pin in the PULL-DOWN register to make it PULL-DOWN pin */
-    SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_PULL_DOWN_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
-  }
-  /* In case NO PULL*/
   else
   {
-    /* Clear the pin in both Pull-up and Pull-down register */
-    CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_PULL_UP_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
-    CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_PULL_DOWN_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    /* Do nothing*/
   }
   
   /*********************** Setting Pin Mode************************************/
   /* DIO Mode*/
   if((Port_Pins+Pin)->Pin_Mode == PORT_DIGITAL_IO)
-  {    
+  {  
     /* Clear alternative selection bit to make it GPIO pin */
     CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_ALT_FUNC_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    
+    /* Clear the section of the required pin in the control registers (clear 4-bits) */
+    *(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_CTL_REG_OFFSET)&= ~( MASK << ((Port_Pins+Pin)->Pin_Num)*SHIFT_LEFT_OFFSET); 
     
     /* Clear Analog bit to enable the analog isolation circuit */ 
     CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
@@ -147,6 +158,9 @@ void Port_Init( const Port_ConfigType* ConfigPtr ){
   { 
     /* Set alternative selection bit to make it alternative function pin */
     SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_ALT_FUNC_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    
+    /* Clear the section of the required pin in the control registers (clear 4-bits) */
+    *(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_CTL_REG_OFFSET)&= ~( MASK << ((Port_Pins+Pin)->Pin_Num)*SHIFT_LEFT_OFFSET); 
     
     /* Disable the GPIO pin to be Digital pin  */
     CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
@@ -174,19 +188,26 @@ void Port_Init( const Port_ConfigType* ConfigPtr ){
   }
   
   /*********************** Setting Pin Initial Value***************************/
-  /* In case Initiak value of the pin is ONE */
-  if((Port_Pins+Pin)->Iniit_Output_Value == PORT_INITIAL_VALUE_ON)
+  /* In case output pin Set its initial value */
+  if((Port_Pins+Pin)->Pin_Direction == PORT_PIN_IN )
   {
-    /* Set the pin in the data register to make its output High */
-    SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_DATA_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    /* In case Initiak value of the pin is ONE */
+    if((Port_Pins+Pin)->Iniit_Output_Value == PORT_INITIAL_VALUE_ON)
+    {
+      /* Set the pin in the data register to make its output High */
+      SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_DATA_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    }
+    /* In case Initiak value of the pin is ZERO */
+    else
+    {
+      /* Clear the pin in the data register to make its output Low */
+      CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_DATA_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    }
   }
-  /* In case Initiak value of the pin is ZERO */
   else
   {
-    /* Clear the pin in the data register to make its output Low */
-    CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_DATA_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    /* Do nothing */
   }
-  
   }
 }
 #if (PORT_SET_PIN_DIRECTION_API == STD_ON)
@@ -430,7 +451,7 @@ void Port_SetPinMode( Port_PinType Pin, Port_PinModeType Mode ){
     /* No Action Required */
   }
   
-  /* Check if Mode is include */
+  /* Check if Mode is included */
   if( Mode >= MAX_MODE_NUMBER ){
     	Det_ReportError(PORT_MODULE_ID, PORT_INSTANCE_ID,PORT_SET_PIN_MODE_SID,
 	                PORT_E_PARAM_INVALID_MODE);
@@ -464,6 +485,9 @@ void Port_SetPinMode( Port_PinType Pin, Port_PinModeType Mode ){
     /* Clear alternative selection bit to make it GPIO pin */
     CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_ALT_FUNC_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
     
+    /* Clear the section of the required pin in the control registers (clear 4-bits) */
+    *(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_CTL_REG_OFFSET)&= ~( MASK << ((Port_Pins+Pin)->Pin_Num)*SHIFT_LEFT_OFFSET); 
+    
     /* Clear Analog bit to enable the analog isolation circuit */ 
     CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_ANALOG_MODE_SEL_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
     
@@ -475,6 +499,9 @@ void Port_SetPinMode( Port_PinType Pin, Port_PinModeType Mode ){
   { 
     /* Set alternative selection bit to make it alternative function pin */
     SET_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_ALT_FUNC_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);
+    
+    /* Clear the section of the required pin in the control registers (clear 4-bits) */
+    *(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_CTL_REG_OFFSET)&= ~( MASK << ((Port_Pins+Pin)->Pin_Num)*SHIFT_LEFT_OFFSET); 
     
     /* Disable the GPIO pin to be Digital pin  */
     CLEAR_BIT(*(volatile uint32 *)((volatile uint8 *)Port_Ptr+PORT_DIGITAL_ENABLE_REG_OFFSET),(Port_Pins+Pin)->Pin_Num);

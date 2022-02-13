@@ -23,11 +23,12 @@
 *********************************************************************************/
 void Init_Task(void)
 {
-    /* Initialize Dio Driver */
-    Dio_Init(&Dio_Configuration);
 
     /* Initialize Port Driver */
     Port_Init(&Port_Configuration);
+    
+    /* Initialize Dio Driver */
+    Dio_Init(&Dio_Configuration);
     
 }
 
